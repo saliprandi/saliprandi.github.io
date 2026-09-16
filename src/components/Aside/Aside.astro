@@ -1,0 +1,35 @@
+---
+import Contact from "./Contact.astro";
+import Skills from "./Skills.astro";
+import TechStack from "./TechStack.astro";
+import Languages from "./Languages.astro";
+import Education from "./Education.astro";
+---
+
+<aside>
+  <Contact />
+  <Skills />
+  <TechStack />
+  <Languages />
+  <Education />
+</aside>
+
+<style>
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+  }
+
+  aside a {
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Print styles */
+  @media only print {
+    aside {
+      gap: 0.3em;
+    }
+  }
+</style>

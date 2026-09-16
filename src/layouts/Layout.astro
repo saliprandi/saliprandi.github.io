@@ -1,0 +1,55 @@
+---
+import "@fontsource-variable/montserrat";
+import "../styles/global.css";
+import "../styles/print.css";
+import Aside from "../components/Aside/Aside.astro";
+import Header from "../components/Header.astro";
+
+interface Props {
+  author?: string;
+  role?: string;
+  url?: string;
+  description?: string;
+  title?: string;
+}
+
+const {
+  author = "Santiago Ignacio Aliprandi",
+  role = "Full-Stack Developer | AI Automation & Agent Workflows",
+  url = "https://saliprandi.github.io",
+  description = "CV for Santiago Aliprandi, full-stack developer: JavaScript, TypeScript, React, Node.js, PostgreSQL, and AI-powered workflow automation.",
+  title,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ?? author}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+    <link rel="canonical" href={url} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={author} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:title" content={author} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header author={author} role={role} />
+    <div class="columns">
+      <Aside />
+      <slot />
+    </div>
+  </body>
+</html>

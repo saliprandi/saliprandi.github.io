@@ -1,0 +1,69 @@
+---
+import IconEmail from "../Icons/IconEmail.astro";
+import IconLinkedin from "../Icons/IconLinkedin.astro";
+import IconGithub from "../Icons/IconGithub.astro";
+import IconPhone from "../Icons/IconPhone.astro";
+import IconLocation from "../Icons/IconLocation.astro";
+---
+
+<section class="contact">
+  <h3 class="upper">Contact</h3>
+
+  <div>
+    <IconEmail />
+    <a href="mailto:santialiprandi@gmail.com" title="Email" class="light">santialiprandi@gmail.com</a>
+  </div>
+
+  <div>
+    <IconPhone />
+    <a href="tel:+5493815658239" title="Phone" class="light">+54 9 381 5658239</a>
+  </div>
+
+  <div>
+    <IconLinkedin />
+    <a href="https://linkedin.com/in/saliprandi" title="LinkedIn profile" target="_blank" class="light">linkedin.com/in/saliprandi</a>
+  </div>
+
+  <div>
+    <IconGithub />
+    <a href="https://github.com/saliprandi" title="GitHub profile" target="_blank" class="light">github.com/saliprandi</a>
+  </div>
+
+  <div>
+    <IconLocation />
+    <span class="light">San Miguel de Tucumán, Argentina</span>
+  </div>
+</section>
+
+<style>
+  .contact > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 1em 0;
+  }
+
+  /* Screens less than 900px */
+  @media only screen and (max-width: 900px) {
+    .contact > div {
+      justify-content: center;
+    }
+  }
+
+  /* Print styles */
+  @media only print {
+    .contact > div {
+      margin: 0.4em 0;
+      gap: 0.4em;
+    }
+
+    .contact svg {
+      width: 1em;
+      height: 1em;
+    }
+
+    h3 {
+      margin-top: 0.5em;
+    }
+  }
+</style>

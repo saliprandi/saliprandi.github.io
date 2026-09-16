@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <section class="section profile">
+      <h3 class="upper">Summary</h3>
+      <p class="light small-in-print">
+        Self-taught full-stack developer. I build web applications with
+        JavaScript, TypeScript, React, Node.js, Express, and PostgreSQL, and I
+        apply AI tools and LLM APIs (OpenAI, Anthropic, MCP) to automate
+        real-world workflows.
+      </p>
+      <ul>
+        <li class="light small-in-print">
+          <strong>Stack:</strong> JavaScript, TypeScript, React, Next.js,
+          Node.js, Express, Astro.
+        </li>
+        <li class="light small-in-print">
+          <strong>Data & cloud:</strong> PostgreSQL, MongoDB, Vercel, Neon.
+        </li>
+        <li class="light small-in-print">
+          <strong>AI & automation:</strong> LLM APIs, MCP, agent workflows,
+          Playwright browser automation.
+        </li>
+      </ul>
+      <p class="light small-in-print">
+        Before software, I spent years doing board-level electronics repair,
+        which taught me systematic diagnostics and working under pressure.
+        Looking for a full-time remote junior full-stack developer role.
+      </p>
+    </section>
+
+    <section class="section profile">
+      <h3 class="upper">Projects</h3>
+      <ul>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/Rocio" target="_blank" rel="noopener noreferrer">Rocio</a>:</strong>{" "}
+          Personal AI agent built on Devin CLI. Orchestrates MCP servers
+          (GitHub, Gmail, WhatsApp, Slack, Notion, Linear) with models via
+          OpenRouter: replies to emails, delivers daily news digests, automates
+          browser tasks, and triages pull requests for merge or reject.
+          Self-hosted.
+        </li>
+        <li class="light small-in-print">
+          <strong>tech-health service intake workflow:</strong>{" "}
+          Designed and built an n8n automation that receives web form
+          submissions via webhook, runs 5-layer anti-spam validation
+          (honeypot, token, timing, phone and name heuristics), silently
+          rejects bots, creates numbered tickets in PostgreSQL, and sends
+          email notifications. Self-hosted behind Cloudflare Tunnel.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://deasinlimites.com/" target="_blank" rel="noopener noreferrer">deasinlimites.com</a>:</strong>{" "}
+          Company website built with Next.js, React, and TypeScript.
+          Markdown content pipeline, Zod validation, Playwright E2E tests,
+          Vercel analytics. Ongoing maintenance.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/tech-health" target="_blank" rel="noopener noreferrer">tech-health</a>:</strong>{" "}
+          Website for an electromedicine company built with Astro, Tailwind,
+          and TypeScript. Deployed on GitHub Pages.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/proyecto-celular-sueno" target="_blank" rel="noopener noreferrer">proyecto-celular-sueno</a>:</strong>{" "}
+          School research project on nighttime phone usage and sleep quality in
+          adolescents. Colegio Santa María, 2026.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section profile">
+      <h3 class="upper">Experience</h3>
+      <ul>
+        <li class="light small-in-print">
+          <strong>Alitrio, AI Training Assistant (Sep 2026 - Present, part-time, remote):</strong>
+          <ul>
+            <li>Assist in delivering CAP (Certified AI Professional), a hands-on program where professionals build their own tools using Google Workspace, Gemini, and Antigravity.</li>
+            <li>Support weekly training sessions based on an adapted design sprint methodology: pain-point discovery, grouping, guided building, and closing.</li>
+            <li>Help participants troubleshoot and refine their AI-powered solutions during live sessions.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>TechHealth, Electromedical Technician (Jul 2026 - Present, full-time):</strong>
+          <ul>
+            <li>Maintain, calibrate, and repair electromedical equipment used in clinical settings.</li>
+            <li>Perform preventive maintenance schedules, troubleshooting, and technical support for medical devices.</li>
+            <li>Diagnose electrical and electronic faults in clinical equipment down to component level.</li>
+            <li>Support clinical staff with equipment readiness, ensuring devices operate safely and within specification.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>Celumania, Technical Specialist in Microsoldering & Mobile Repair (Aug 2025 - Jul 2026):</strong>
+          <ul>
+            <li>Performed board-level repair and microsoldering on smartphones, tablets, computers, and game consoles, diagnosing hardware faults other shops could not resolve.</li>
+            <li>Carried out component-level troubleshooting, data recovery, and circuit diagnostics under tight turnaround times.</li>
+            <li>Collaborated in training sessions for the local repair technicians guild, sharing microsoldering and diagnostic techniques.</li>
+            <li>Handled front-desk customer service: device intake, quotes, repair status updates, and after-service support.</li>
+            <li>Coordinated with parts suppliers for component sourcing and stock management.</li>
+            <li>Covered administrative tasks including service records, billing support, and daily shop operations.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>Gadget, Technician & Sales (Sep 2024 - Jul 2026, personal venture):</strong>
+          <ul>
+            <li>Ran my own independent repair and accessories business, handling the full operation end to end.</li>
+            <li>Diagnosed and repaired smartphones, tablets, computers, and game consoles at board level: microsoldering, screen replacements, battery service, and hardware troubleshooting.</li>
+            <li>Managed customer service, supplier relationships, and administrative tasks.</li>
+            <li>Sold accessories and handled quotes, billing, and stock.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section no-print">
+      <h3 class="upper">Footer</h3>
+      <p class="light small-in-print manifesto">
+        "AI automation applied to real problems."
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .manifesto {
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+</style>
