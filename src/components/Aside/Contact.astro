@@ -4,10 +4,17 @@ import IconLinkedin from "../Icons/IconLinkedin.astro";
 import IconGithub from "../Icons/IconGithub.astro";
 import IconPhone from "../Icons/IconPhone.astro";
 import IconLocation from "../Icons/IconLocation.astro";
+import { ui, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
 ---
 
 <section class="contact">
-  <h3 class="upper">Contact</h3>
+  <h3 class="upper">{t.titles.contact}</h3>
 
   <div>
     <IconEmail />

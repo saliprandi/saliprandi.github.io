@@ -1,9 +1,13 @@
 ---
+import LangSwitch from "./LangSwitch.astro";
+import type { Lang } from "../i18n/ui";
+
 interface Props {
   author: string;
   role: string;
+  lang: Lang;
 }
-const { author, role } = Astro.props;
+const { author, role, lang } = Astro.props;
 ---
 
 <header>
@@ -11,6 +15,7 @@ const { author, role } = Astro.props;
     <h1 class="upper">{author}</h1>
     <h2 class="upper light">{role}</h2>
   </div>
+  <LangSwitch lang={lang} />
 </header>
 
 <style>

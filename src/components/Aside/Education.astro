@@ -1,7 +1,23 @@
+---
+import { ui, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
 <section class="skill">
-  <h3 class="upper">Education</h3>
+  <h3 class="upper">{t.titles.education}</h3>
   <ul class="light">
-    <li>Colegio Santa María</li>
-    <li>High School Diploma <small>(6th year, in progress)</small></li>
+    {
+      t.education.map((item) => (
+        <li>
+          {item.name}
+          {item.note && <small>({item.note})</small>}
+        </li>
+      ))
+    }
   </ul>
 </section>

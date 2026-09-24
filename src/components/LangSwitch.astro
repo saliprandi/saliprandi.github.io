@@ -1,0 +1,68 @@
+---
+import type { Lang } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<nav class="lang-switch no-print" aria-label="Language / Idioma">
+  <a
+    href="/"
+    hreflang="en"
+    class:list={[{ active: lang === "en" }]}
+    aria-current={lang === "en" ? "page" : undefined}
+    lang="en">EN</a
+  >
+  <span class="divider" aria-hidden="true"></span>
+  <a
+    href="/es/"
+    hreflang="es"
+    class:list={[{ active: lang === "es" }]}
+    aria-current={lang === "es" ? "page" : undefined}
+    lang="es">ES</a
+  >
+</nav>
+
+<style>
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: var(--color-bg-pill);
+    border-radius: 999px;
+    padding: 0.3em 0.7em;
+  }
+
+  .lang-switch a {
+    opacity: 0.55;
+    border-bottom: none;
+  }
+
+  .lang-switch a:hover {
+    opacity: 0.85;
+  }
+
+  .lang-switch a.active {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  .divider {
+    width: 1px;
+    height: 1em;
+    background: var(--color-texts-light);
+    opacity: 0.4;
+  }
+
+  /* Screens less than 900px */
+  @media only screen and (max-width: 900px) {
+    .lang-switch {
+      align-self: center;
+    }
+  }
+</style>

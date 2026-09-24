@@ -1,7 +1,22 @@
+---
+import { ui, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
 <section class="skill">
-  <h3 class="upper">Languages</h3>
+  <h3 class="upper">{t.titles.languages}</h3>
   <ul class="light">
-    <li>Spanish <small>(Native)</small></li>
-    <li>English <small>(Intermediate B1-B2)</small></li>
+    {
+      t.languages.map((item) => (
+        <li>
+          {item.name} <small>({item.note})</small>
+        </li>
+      ))
+    }
   </ul>
 </section>

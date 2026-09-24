@@ -4,8 +4,10 @@ import "../styles/global.css";
 import "../styles/print.css";
 import Aside from "../components/Aside/Aside.astro";
 import Header from "../components/Header.astro";
+import { ui, type Lang } from "../i18n/ui";
 
 interface Props {
+  lang?: Lang;
   author?: string;
   role?: string;
   url?: string;
@@ -13,17 +15,16 @@ interface Props {
   title?: string;
 }
 
-const {
-  author = "Santiago Ignacio Aliprandi",
-  role = "Full-Stack Developer | AI Automation & Agent Workflows",
-  url = "https://saliprandi.github.io",
-  description = "CV for Santiago Aliprandi, full-stack developer: JavaScript, TypeScript, React, Node.js, PostgreSQL, and AI-powered workflow automation.",
-  title,
-} = Astro.props;
+const { lang = "en", author = "Santiago Ignacio Aliprandi", title } =
+  Astro.props;
+const t = ui[lang];
+const role = Astro.props.role ?? t.role;
+const url = Astro.props.url ?? t.url;
+const description = Astro.props.description ?? t.description;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,12 +32,16 @@ const {
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="canonical" href={url} />
+    <link rel="alternate" hreflang="en" href="https://saliprandi.github.io/" />
+    <link rel="alternate" hreflang="es" href="https://saliprandi.github.io/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://saliprandi.github.io/" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content={author} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={t.ogLocale} />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:title" content={author} />
@@ -46,9 +51,9 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <Header author={author} role={role} />
+    <Header author={author} role={role} lang={lang} />
     <div class="columns">
-      <Aside />
+      <Aside lang={lang} />
       <slot />
     </div>
   </body>

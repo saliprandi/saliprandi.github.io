@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout lang="es">
+  <main>
+    <section class="section profile">
+      <h3 class="upper">Resumen</h3>
+      <p class="light small-in-print">
+        Desarrollador full-stack autodidacta. Construyo aplicaciones web con
+        JavaScript, TypeScript, React, Node.js, Express y PostgreSQL, y aplico
+        herramientas de IA y APIs de LLMs (OpenAI, Anthropic, MCP) para
+        automatizar flujos de trabajo reales.
+      </p>
+      <ul>
+        <li class="light small-in-print">
+          <strong>Stack:</strong> JavaScript, TypeScript, React, Next.js,
+          Node.js, Express, Astro.
+        </li>
+        <li class="light small-in-print">
+          <strong>Datos y nube:</strong> PostgreSQL, MongoDB, Vercel, Neon.
+        </li>
+        <li class="light small-in-print">
+          <strong>IA y automatización:</strong> APIs de LLMs, MCP, flujos de
+          trabajo con agentes, automatización de navegador con Playwright.
+        </li>
+      </ul>
+      <p class="light small-in-print">
+        Antes de dedicarme al software, pasé años haciendo reparación
+        electrónica a nivel de placa, lo que me enseñó diagnóstico sistemático
+        y trabajo bajo presión. Busco un rol remoto full-time como desarrollador
+        full-stack junior.
+      </p>
+    </section>
+
+    <section class="section profile">
+      <h3 class="upper">Proyectos</h3>
+      <ul>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/Rocio" target="_blank" rel="noopener noreferrer">Rocio</a>:</strong>{" "}
+          Agente personal de IA construido sobre Devin CLI. Orquesta servidores
+          MCP (GitHub, Gmail, WhatsApp, Slack, Notion, Linear) con modelos vía
+          OpenRouter: responde emails, envía resúmenes diarios de noticias,
+          automatiza tareas de navegador y clasifica pull requests para merge o
+          rechazo. Self-hosted.
+        </li>
+        <li class="light small-in-print">
+          <strong>Flujo de ingreso de service de tech-health:</strong>{" "}
+          Diseñé y construí una automatización en n8n que recibe envíos de
+          formularios web vía webhook, ejecuta una validación anti-spam de 5
+          capas (honeypot, token, timing, heurísticas de teléfono y nombre),
+          rechaza bots silenciosamente, crea tickets numerados en PostgreSQL y
+          envía notificaciones por email. Self-hosted detrás de Cloudflare
+          Tunnel.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://deasinlimites.com/" target="_blank" rel="noopener noreferrer">deasinlimites.com</a>:</strong>{" "}
+          Sitio web corporativo construido con Next.js, React y TypeScript.
+          Pipeline de contenido en Markdown, validación con Zod, tests E2E con
+          Playwright, analytics de Vercel. Mantenimiento continuo.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/tech-health" target="_blank" rel="noopener noreferrer">tech-health</a>:</strong>{" "}
+          Sitio web para una empresa de electromedicina construido con Astro,
+          Tailwind y TypeScript. Deployado en GitHub Pages.
+        </li>
+        <li class="light small-in-print">
+          <strong><a href="https://github.com/saliprandi/proyecto-celular-sueno" target="_blank" rel="noopener noreferrer">proyecto-celular-sueno</a>:</strong>{" "}
+          Proyecto de investigación escolar sobre el uso nocturno del celular y
+          la calidad del sueño en adolescentes. Colegio Santa María, 2026.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section profile">
+      <h3 class="upper">Experiencia</h3>
+      <ul>
+        <li class="light small-in-print">
+          <strong>Alitrio, Asistente de Capacitación en IA (Sep 2026 - Presente, part-time, remoto):</strong>
+          <ul>
+            <li>Asisto en la entrega de CAP (Certified AI Professional), un programa práctico donde profesionales construyen sus propias herramientas usando Google Workspace, Gemini y Antigravity.</li>
+            <li>Apoyo sesiones semanales de capacitación basadas en una metodología de design sprint adaptada: descubrimiento de pain points, agrupación, construcción guiada y cierre.</li>
+            <li>Ayudo a los participantes a resolver problemas y refinar sus soluciones con IA durante las sesiones en vivo.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>TechHealth, Técnico Electromédico (Jul 2026 - Presente, full-time):</strong>
+          <ul>
+            <li>Mantenimiento, calibración y reparación de equipos electromédicos usados en entornos clínicos.</li>
+            <li>Ejecuto planes de mantenimiento preventivo, troubleshooting y soporte técnico para dispositivos médicos.</li>
+            <li>Diagnostico fallas eléctricas y electrónicas en equipos clínicos a nivel de componente.</li>
+            <li>Asisto al personal clínico con la disponibilidad de equipos, asegurando que los dispositivos operen de forma segura y dentro de especificación.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>Celumania, Especialista Técnico en Microsoldadura y Reparación Móvil (Ago 2025 - Jul 2026):</strong>
+          <ul>
+            <li>Reparación a nivel de placa y microsoldadura en smartphones, tablets, computadoras y consolas, diagnosticando fallas de hardware que otros service no resolvían.</li>
+            <li>Troubleshooting a nivel de componente, recuperación de datos y diagnóstico de circuitos bajo tiempos de entrega ajustados.</li>
+            <li>Colaboré en capacitaciones para el gremio local de técnicos de reparación, compartiendo técnicas de microsoldadura y diagnóstico.</li>
+            <li>Atención al cliente en mostrador: recepción de equipos, presupuestos, actualizaciones de estado de reparación y soporte post-servicio.</li>
+            <li>Coordinación con proveedores de repuestos para sourcing de componentes y gestión de stock.</li>
+            <li>Tareas administrativas: registros de service, soporte de facturación y operación diaria del local.</li>
+          </ul>
+        </li>
+        <li class="light small-in-print">
+          <strong>Gadget, Técnico y Ventas (Sep 2024 - Jul 2026, emprendimiento personal):</strong>
+          <ul>
+            <li>Manejé mi propio negocio independiente de reparación y accesorios, cubriendo toda la operación de punta a punta.</li>
+            <li>Diagnóstico y reparación de smartphones, tablets, computadoras y consolas a nivel de placa: microsoldadura, cambio de pantallas, service de baterías y troubleshooting de hardware.</li>
+            <li>Gestión de atención al cliente, relación con proveedores y tareas administrativas.</li>
+            <li>Venta de accesorios, presupuestos, facturación y stock.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section no-print">
+      <h3 class="upper">Footer</h3>
+      <p class="light small-in-print manifesto">
+        "Automatización con IA aplicada a problemas reales."
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .manifesto {
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+</style>

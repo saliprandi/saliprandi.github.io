@@ -1,11 +1,16 @@
+---
+import { ui, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
 <section class="skill">
-  <h3 class="upper">Skills</h3>
+  <h3 class="upper">{t.titles.skills}</h3>
   <ul class="light">
-    <li>AI Automation</li>
-    <li>Agent Workflows</li>
-    <li>LLM Integration</li>
-    <li>Prompt Engineering</li>
-    <li>Workflow Automation</li>
-    <li>Web Development</li>
+    {t.skills.map((skill) => <li>{skill}</li>)}
   </ul>
 </section>

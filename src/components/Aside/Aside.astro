@@ -4,14 +4,20 @@ import Skills from "./Skills.astro";
 import TechStack from "./TechStack.astro";
 import Languages from "./Languages.astro";
 import Education from "./Education.astro";
+import type { Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
 ---
 
 <aside>
-  <Contact />
-  <Skills />
-  <TechStack />
-  <Languages />
-  <Education />
+  <Contact lang={lang} />
+  <Skills lang={lang} />
+  <TechStack lang={lang} />
+  <Languages lang={lang} />
+  <Education lang={lang} />
 </aside>
 
 <style>
