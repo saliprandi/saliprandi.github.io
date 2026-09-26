@@ -48,11 +48,6 @@ h3 {
 ul {
   list-style: circle;
   padding: 0 0 0 1.4em;
-  font-size: 0.9em;
-
-  ul {
-    font-size: 1em;
-  }
 
   li:not(:last-child) {
     margin-bottom: 0.4em;

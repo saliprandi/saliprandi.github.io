@@ -48,7 +48,7 @@
   ul {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    padding-left: 12pt !important;
+    padding-left: 9pt !important;
     gap: 1.5pt !important;
     list-style: circle !important;
     page-break-inside: avoid;
@@ -63,20 +63,20 @@
   }
 
   .small-in-print {
-    font-size: 10px !important;
+    font-size: 10.5px !important;
     line-height: 1.25 !important;
   }
 
   ul li:not(:last-child) {
-    margin-bottom: 4px !important;
+    margin-bottom: 3px !important;
   }
 
   ul ul {
-    padding-left: 14pt !important;
+    padding-left: 8pt !important;
   }
 
   ul ul li:not(:last-child) {
-    margin-bottom: 1.5px !important;
+    margin-bottom: 1px !important;
   }
 
   p {
@@ -109,15 +109,15 @@
   }
 
   .columns {
-    gap: 16px !important;
+    gap: 12px !important;
   }
 
   aside {
     gap: 14px !important;
-    flex-basis: 25% !important;
-    max-width: 25% !important;
+    flex-basis: 22% !important;
+    max-width: 22% !important;
     flex-shrink: 0;
-    font-size: 10px !important;
+    font-size: 10.5px !important;
     justify-content: flex-start;
   }
 
@@ -130,7 +130,7 @@
   }
 
   main {
-    flex-basis: 75% !important;
+    flex-basis: 78% !important;
     flex-shrink: 1;
   }
 
