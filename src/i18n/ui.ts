@@ -20,6 +20,7 @@ interface Translation {
   description: string;
   url: string;
   ogLocale: string;
+  downloadPdf: string;
   titles: {
     contact: string;
     skills: string;
@@ -40,6 +41,7 @@ export const ui: Record<Lang, Translation> = {
       "CV for Santiago Aliprandi, full-stack developer: JavaScript, TypeScript, React, Node.js, PostgreSQL, and AI-powered workflow automation.",
     url: "https://saliprandi.github.io/",
     ogLocale: "en_US",
+    downloadPdf: "Download PDF",
     titles: {
       contact: "Contact",
       skills: "Skills",
@@ -84,6 +86,7 @@ export const ui: Record<Lang, Translation> = {
       "CV de Santiago Aliprandi, desarrollador full-stack: JavaScript, TypeScript, React, Node.js, PostgreSQL y automatización de flujos de trabajo con IA.",
     url: "https://saliprandi.github.io/es/",
     ogLocale: "es_AR",
+    downloadPdf: "Descargar PDF",
     titles: {
       contact: "Contacto",
       skills: "Habilidades",

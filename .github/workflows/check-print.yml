@@ -1,0 +1,41 @@
+name: Check one-page A4 print
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check-print:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+      - run: npx astro build
+
+      - name: Serve dist
+        run: python3 -m http.server 4321 --directory dist &
+
+      - name: Print both pages to PDF and count pages
+        run: |
+          set -e
+          pip install -q pypdf
+          sleep 1
+          for path in "" "es/"; do
+            name="${path:-en}"
+            google-chrome --headless --disable-gpu --no-sandbox \
+              --no-pdf-header-footer \
+              --print-to-pdf="/tmp/cv-${name%/}.pdf" \
+              "http://localhost:4321/${path}"
+            pages=$(python3 -c "from pypdf import PdfReader; print(len(PdfReader('/tmp/cv-${name%/}.pdf').pages))")
+            echo "${name%/} -> $pages page(s)"
+            if [ "$pages" != "1" ]; then
+              echo "::error::${name%/} prints to $pages pages, expected exactly 1 A4 page"
+              exit 1
+            fi
+          done

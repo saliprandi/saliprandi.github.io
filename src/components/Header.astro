@@ -1,5 +1,6 @@
 ---
 import LangSwitch from "./LangSwitch.astro";
+import DownloadPdf from "./DownloadPdf.astro";
 import type { Lang } from "../i18n/ui";
 
 interface Props {
@@ -15,7 +16,10 @@ const { author, role, lang } = Astro.props;
     <h1 class="upper">{author}</h1>
     <h2 class="upper light">{role}</h2>
   </div>
-  <LangSwitch lang={lang} />
+  <div class="actions">
+    <DownloadPdf lang={lang} />
+    <LangSwitch lang={lang} />
+  </div>
 </header>
 
 <style>
@@ -36,12 +40,22 @@ const { author, role, lang } = Astro.props;
     margin: 0;
   }
 
+  .actions {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6em;
+  }
+
   /* Screens less than 900px */
   @media only screen and (max-width: 900px) {
     header {
       flex-direction: column-reverse;
       align-items: center;
       text-align: center;
+    }
+
+    .actions {
+      align-items: center;
     }
   }
 
