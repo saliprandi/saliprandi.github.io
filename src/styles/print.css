@@ -29,7 +29,7 @@
   }
 
   .section {
-    margin-bottom: 10px !important;
+    margin-bottom: 8px !important;
     page-break-inside: avoid;
   }
 
@@ -63,7 +63,7 @@
   }
 
   .small-in-print {
-    font-size: 10.5px !important;
+    font-size: 10.3px !important;
     line-height: 1.25 !important;
   }
 
