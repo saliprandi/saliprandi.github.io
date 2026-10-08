@@ -63,7 +63,7 @@ export const ui: Record<Lang, Translation> = {
         value:
           "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows.",
       },
-      { label: "Languages:", value: "JavaScript, TypeScript." },
+      { label: "Languages:", value: "JavaScript, TypeScript, Python." },
       { label: "Web:", value: "React, Next.js, Node.js, Express, Astro." },
       { label: "DB & Cloud:", value: "PostgreSQL, MongoDB, Vercel, Neon." },
       {
@@ -108,7 +108,7 @@ export const ui: Record<Lang, Translation> = {
         value:
           "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows.",
       },
-      { label: "Lenguajes:", value: "JavaScript, TypeScript." },
+      { label: "Lenguajes:", value: "JavaScript, TypeScript, Python." },
       { label: "Web:", value: "React, Next.js, Node.js, Express, Astro." },
       { label: "BD y Nube:", value: "PostgreSQL, MongoDB, Vercel, Neon." },
       {
