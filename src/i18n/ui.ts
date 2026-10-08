@@ -36,7 +36,7 @@ interface Translation {
 
 export const ui: Record<Lang, Translation> = {
   en: {
-    role: "Full-Stack Developer | AI Automation & Agent Workflows",
+    role: "AI Engineering | AI Automation & Agent Workflows",
     description:
       "CV for Santiago Aliprandi, full-stack developer: JavaScript, TypeScript, React, Node.js, PostgreSQL, and AI-powered workflow automation.",
     url: "https://saliprandi.github.io/",
@@ -81,7 +81,7 @@ export const ui: Record<Lang, Translation> = {
     ],
   },
   es: {
-    role: "Desarrollador Full-Stack | Automatización con IA y Agentes",
+    role: "Ingeniería de IA | Automatización con IA y Agentes",
     description:
       "CV de Santiago Aliprandi, desarrollador full-stack: JavaScript, TypeScript, React, Node.js, PostgreSQL y automatización de flujos de trabajo con IA.",
     url: "https://saliprandi.github.io/es/",
