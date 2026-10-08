@@ -139,3 +139,14 @@
     letter-spacing: 0.02em;
   }
 }
+
+/* ES locale is ~15% longer than EN; tighten slightly to keep one A4 page */
+@media only print {
+  html[lang="es"] .small-in-print {
+    font-size: 9.8px !important;
+    line-height: 1.22 !important;
+  }
+  html[lang="es"] .section {
+    margin-bottom: 6px !important;
+  }
+}
