@@ -61,7 +61,7 @@ export const ui: Record<Lang, Translation> = {
       {
         label: "AI & Automation:",
         value:
-          "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows.",
+          "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows, n8n, LangGraph.",
       },
       { label: "Languages:", value: "JavaScript, TypeScript, Python." },
       { label: "Web:", value: "React, Next.js, Node.js, Express, Astro." },
@@ -73,7 +73,7 @@ export const ui: Record<Lang, Translation> = {
     ],
     languages: [
       { name: "Spanish", note: "Native" },
-      { name: "English", note: "Intermediate B1-B2" },
+      { name: "English", note: "Intermediate B2" },
     ],
     education: [
       { name: "Colegio Santa María" },
@@ -106,7 +106,7 @@ export const ui: Record<Lang, Translation> = {
       {
         label: "IA y Automatización:",
         value:
-          "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows.",
+          "OpenAI API, Anthropic API, MCP, Claude Code, Cursor, Agent Workflows, n8n, LangGraph.",
       },
       { label: "Lenguajes:", value: "JavaScript, TypeScript, Python." },
       { label: "Web:", value: "React, Next.js, Node.js, Express, Astro." },
@@ -118,7 +118,7 @@ export const ui: Record<Lang, Translation> = {
     ],
     languages: [
       { name: "Español", note: "Nativo" },
-      { name: "Inglés", note: "Intermedio B1-B2" },
+      { name: "Inglés", note: "Intermedio B2" },
     ],
     education: [
       { name: "Colegio Santa María" },
